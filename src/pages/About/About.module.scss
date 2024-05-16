@@ -1,0 +1,52 @@
+.background {
+  background-image: url('../About/images/AboutBack.jpg');
+  background-size: cover;
+  background-size: 900px;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  width: 80vw;
+
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+}
+.aboutContent {
+  margin-top: 120px;
+  background-color: whitesmoke;
+  width: 80%;
+  padding: 45px;
+}
+h1 {
+  font-size: 28px;
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 15px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 12px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.about_ul {
+  margin-left: 5%;
+  font-size: 12px;
+  list-style-type: disc; /* Или другой тип маркера, например, circle, square и т.д. */
+}
+
+.contacts {
+  font-size: large;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.contacts:hover {
+  color: red;
+  transform: scale(1.1);
+  cursor: pointer;
+}

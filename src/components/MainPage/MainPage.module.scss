@@ -1,0 +1,122 @@
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px; /* Высота блока */
+  background-color: white; /* Фон блока */
+  background-image: repeating-linear-gradient(
+    to right,
+    black 0,
+    /* Цвет точек */ black 1px,
+    /* Ширина точки */ transparent 1px,
+    /* Начало прозрачного пространства сразу после точки */ transparent 10px
+      /* Ширина прозрачного пространства между точками */
+  );
+  background-size: 100% 1px; /* Растягиваем фоновое изображение по ширине блока и ограничиваем высоту 1px */
+  background-repeat: no-repeat;
+  background-position: center; /* Центрируем точки по вертикали внутри блока */
+}
+
+.text {
+  text-align: center;
+  font-size: 18px;
+  width: 35%;
+  background-color: white;
+}
+.sort {
+  font-size: 12px;
+
+  margin-top: 5px;
+  display: flex;
+  width: 100%;
+  height: 140px;
+  background-color: #f8f8f8;
+  border: 1px solid red;
+}
+.column {
+  width: 70%;
+  display: flex;
+
+  flex-direction: column; /* Ориентирует элементы колонки вертикально */
+  /* Расстояние между столбиками */
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.sort_param {
+  height: 20%;
+  width: 60%;
+  border-radius: 3px;
+  border: 1px solid gray;
+}
+.send_form11 {
+  margin-top: 5px;
+  background-color: #f20009;
+  width: 20%;
+  color: white;
+  border-radius: 3px;
+  height: 30px;
+  font-weight: 600;
+}
+.send_form {
+  width: 80px;
+  text-align: start;
+  margin-top: 5px;
+  display: inline-block;
+
+  border-radius: 3px;
+  color: #fff;
+
+  font-size: 12px;
+
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: red;
+    border-radius: 3px;
+    z-index: -2;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 30px;
+    background-color: darken(red, 15%);
+    transition: all 0.5s;
+    border-radius: 3px;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+
+  .span {
+    padding-left: 20px;
+    font-size: 0.7rem;
+    color: #fff;
+  }
+}
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product {
+  flex: 0 0 33.333%; /* не растягиваться, не сжиматься, базовая ширина 33.333% */
+  box-sizing: border-box; /* включает padding и border в ширину элемента */
+  padding: 10px; /* пространство внутри элементов */
+}
